@@ -19,7 +19,14 @@ namespace DB_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form1 Form1 = new Form1();
+            Form1.Show();
+            this.Hide();
+        }
 
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

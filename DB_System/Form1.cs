@@ -110,5 +110,10 @@ namespace DB_System
             textBox4.Text = "";
             
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
