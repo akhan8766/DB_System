@@ -12,6 +12,7 @@ namespace DB_System
 {
     public partial class Form1 : Form
     {
+    
         SqlConnection connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\c3443955\Documents\DB_Server1.mdf;Integrated Security = True; Connect Timeout = 30");
         public Form1()
         {
