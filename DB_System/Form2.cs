@@ -28,5 +28,14 @@ namespace DB_System
         {
             Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 Form4 = new Form4();
+            Form4.Show();
+            this.Hide();
+
+        }
+
     }
 }

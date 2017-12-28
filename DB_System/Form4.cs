@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+namespace DB_System
+{
+    public partial class Form4 : Form
+    {
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\c3443955\Documents\myDB.mdf;Integrated Security=True;Connect Timeout=30");
+        public Form4()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into [MyTable] (ApplicationName, BugId, Cause) values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text +"')";
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            MessageBox.Show("Data inserted successfully");
+        }
+    }
+}

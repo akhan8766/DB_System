@@ -180,7 +180,7 @@
             this.MaximumSize = new System.Drawing.Size(421, 503);
             this.MinimumSize = new System.Drawing.Size(421, 503);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "WhiteBox";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
