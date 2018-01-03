@@ -14,6 +14,8 @@ namespace DB_System
     {
     
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
+        private readonly string connectionString;
+
         public Form1()
         {
             InitializeComponent();
@@ -56,7 +58,8 @@ namespace DB_System
 
         private void button5_Click(object sender, EventArgs e)
         {
-            display_data();
+          
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -67,11 +70,11 @@ namespace DB_System
             cmd.CommandText = "delete from [ASETable] where name = '" + textBox5.Text + "'";
             cmd.ExecuteNonQuery();
             connection.Close();
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
+            //textBox1.Text = "";
+            //textBox2.Text = "";
+            //textBox3.Text = "";
+           // textBox4.Text = "";
+            //textBox5.Text = "";
             display_data();
             MessageBox.Show("Data deleted Successfully");
 
@@ -99,12 +102,15 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
+
             cmd.CommandText = "select * from [ASETable] where name = '" + textBox4.Text + "'";
             cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            DataTable dta= new DataTable();
+            SqlDataAdapter dataadp = new SqlDataAdapter(cmd);
+            
+            dataadp.Fill(dta);
+          
+            dataGridView1.DataSource = dta;
             connection.Close();
             textBox1.Text = "";
             textBox2.Text = "";
@@ -118,28 +124,17 @@ namespace DB_System
             Application.Exit();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
+            this.Hide();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
 
         }
     }

@@ -42,5 +42,12 @@ namespace DB_System
             textBox3.Text = "";
             MessageBox.Show("Data inserted successfully");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+        }
     }
 }
