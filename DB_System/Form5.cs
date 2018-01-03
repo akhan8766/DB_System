@@ -35,6 +35,34 @@ namespace DB_System
         {
             display_data();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string[,] Datavalue = new string[dataGridView1.Rows.Count, dataGridView1.Columns.Count];
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                foreach (DataGridViewColumn col in dataGridView1.Columns)
+                {
+                    Datavalue[row.Index, col.Index] = dataGridView1.Rows[row.Index].Cells[col.Index].Value.ToString();
+                }
+            }
+            int i = 0;
+            foreach (string ss in Datavalue)
+                listBox1.Items.Add(ss);
+            i++;
+        }
     }
     }
 
