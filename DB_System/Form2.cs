@@ -37,5 +37,11 @@ namespace DB_System
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.Show();
+            this.Hide();
+        }
     }
 }

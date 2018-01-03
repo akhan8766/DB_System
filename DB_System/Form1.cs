@@ -31,7 +31,7 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into [ASETable] (ClassFile,Method,Codeblock) values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "')";
+            cmd.CommandText = "insert into [ASETable] (ClassFile,Method,Codeblock,CodeAuthor) values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox6.Text +"')";
             cmd.ExecuteNonQuery();
             connection.Close();
             textBox1.Text = "";
@@ -58,8 +58,7 @@ namespace DB_System
 
         private void button5_Click(object sender, EventArgs e)
         {
-          
-            
+        
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -85,7 +84,7 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update ASETable set Method = '" + textBox2.Text + "' , ClassFile = '" + textBox1.Text + "', CodeBlock = '" + textBox3.Text + "'  where  BugId = '" + textBox5.Text +"'";
+            cmd.CommandText = "update ASETable set Method = '" + textBox2.Text + "' , ClassFile = '" + textBox1.Text + "', CodeBlock = '" + textBox3.Text + "', CodeAuthor = '" + textBox6.Text +"', where  BugId = '" + textBox5.Text +"'";
             cmd.ExecuteNonQuery();
             connection.Close();
             textBox1.Text = "";
@@ -135,6 +134,16 @@ namespace DB_System
             this.Hide();
             Form2 form2 = new Form2();
             form2.ShowDialog();
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            display_data();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
