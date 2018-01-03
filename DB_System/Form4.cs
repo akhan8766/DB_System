@@ -12,7 +12,7 @@ namespace DB_System
 {
     public partial class Form4 : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\c3443955\Documents\myDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
         public Form4()
         {
             InitializeComponent();
@@ -23,10 +23,7 @@ namespace DB_System
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void Form4_Load(object sender, EventArgs e)
         {
@@ -38,11 +35,10 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into [MyTable] (ApplicationName, BugId, Cause) values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text +"')";
+            cmd.CommandText = "insert into [ASETable] (Name, Cause) values ('" + textBox1.Text + "', '" + textBox3.Text +"')";
             cmd.ExecuteNonQuery();
             connection.Close();
             textBox1.Text = "";
-            textBox2.Text = "";
             textBox3.Text = "";
             MessageBox.Show("Data inserted successfully");
         }

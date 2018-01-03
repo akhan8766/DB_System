@@ -24,8 +24,8 @@ namespace DB_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\c3443955\Documents\myDB.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter dataadp = new SqlDataAdapter("select count (*) from login where username = '" + textBox1.Text + "' and password='" + textBox2.Text + "'", connection);
+            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDataAdapter dataadp = new SqlDataAdapter("select count (*) from login where username = '" + textBox1.Text + "' and password ='" + textBox2.Text + "'", connection);
             DataTable dta = new DataTable();
             dataadp.Fill(dta);
             if (dta.Rows[0][0].ToString() == "1")

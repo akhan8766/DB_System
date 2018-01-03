@@ -13,7 +13,7 @@ namespace DB_System
     public partial class Form1 : Form
     {
     
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\c3443955\Documents\myDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
         public Form1()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into [MyTable] (Name,Surname,Address) values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "')";
+            cmd.CommandText = "insert into [ASETable] (ClassFile,Method,Codeblock) values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "')";
             cmd.ExecuteNonQuery();
             connection.Close();
             textBox1.Text = "";
@@ -45,7 +45,7 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from [MyTable]";
+            cmd.CommandText = "select * from [ASETable]";
             cmd.ExecuteNonQuery();
             DataTable dta = new DataTable();
             SqlDataAdapter dataadp = new SqlDataAdapter(cmd);
@@ -64,13 +64,14 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "delete from [MyTable] where name = '" + textBox1.Text + "'";
+            cmd.CommandText = "delete from [ASETable] where name = '" + textBox5.Text + "'";
             cmd.ExecuteNonQuery();
             connection.Close();
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
+            textBox5.Text = "";
             display_data();
             MessageBox.Show("Data deleted Successfully");
 
@@ -81,13 +82,14 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update [MyTable] set name = '" + textBox2.Text + "'where name = '"+textBox1.Text+"'";
+            cmd.CommandText = "update ASETable set Method = '" + textBox2.Text + "' , ClassFile = '" + textBox1.Text + "', CodeBlock = '" + textBox3.Text + "'  where  BugId = '" + textBox5.Text +"'";
             cmd.ExecuteNonQuery();
             connection.Close();
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
+            textBox5.Text = "";
             display_data();
             MessageBox.Show("Data updated Successfully");
         }
@@ -97,7 +99,7 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from [MyTable] where name = '" + textBox4.Text + "'";
+            cmd.CommandText = "select * from [ASETable] where name = '" + textBox4.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -108,12 +110,37 @@ namespace DB_System
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
-            
+            textBox5.Text = "";            
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
