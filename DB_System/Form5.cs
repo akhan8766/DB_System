@@ -63,6 +63,11 @@ namespace DB_System
                 listBox1.Items.Add(ss);
             i++;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
