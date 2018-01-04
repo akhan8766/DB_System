@@ -38,11 +38,10 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.backbtn = new System.Windows.Forms.Button();
+            this.btnInar = new System.Windows.Forms.Button();
+            this.btnUpArch = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,12 +50,12 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(21, 43);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(291, 493);
+            this.dataGridView1.Size = new System.Drawing.Size(457, 493);
             this.dataGridView1.TabIndex = 0;
             // 
             // bugdisp
             // 
-            this.bugdisp.Location = new System.Drawing.Point(106, 542);
+            this.bugdisp.Location = new System.Drawing.Point(181, 550);
             this.bugdisp.Name = "bugdisp";
             this.bugdisp.Size = new System.Drawing.Size(106, 31);
             this.bugdisp.TabIndex = 1;
@@ -129,63 +128,55 @@
             this.textBox4.Size = new System.Drawing.Size(176, 20);
             this.textBox4.TabIndex = 9;
             // 
-            // listBox1
+            // backbtn
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(338, 182);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(233, 303);
-            this.listBox1.TabIndex = 10;
+            this.backbtn.Location = new System.Drawing.Point(35, 550);
+            this.backbtn.Name = "backbtn";
+            this.backbtn.Size = new System.Drawing.Size(106, 31);
+            this.backbtn.TabIndex = 11;
+            this.backbtn.Text = "Back";
+            this.backbtn.UseVisualStyleBackColor = true;
+            this.backbtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnInar
+            // 
+            this.btnInar.Location = new System.Drawing.Point(589, 182);
+            this.btnInar.Name = "btnInar";
+            this.btnInar.Size = new System.Drawing.Size(75, 23);
+            this.btnInar.TabIndex = 12;
+            this.btnInar.Text = "Insert";
+            this.btnInar.UseVisualStyleBackColor = true;
+            this.btnInar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnUpArch
+            // 
+            this.btnUpArch.Location = new System.Drawing.Point(690, 182);
+            this.btnUpArch.Name = "btnUpArch";
+            this.btnUpArch.Size = new System.Drawing.Size(75, 23);
+            this.btnUpArch.TabIndex = 13;
+            this.btnUpArch.Text = "Update";
+            this.btnUpArch.UseVisualStyleBackColor = true;
+            this.btnUpArch.Click += new System.EventHandler(this.btnUpArch_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(106, 587);
+            this.button1.Location = new System.Drawing.Point(636, 237);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 31);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Back";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Archive";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(589, 182);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Insert";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(691, 182);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(427, 513);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Display";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 630);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btnUpArch);
+            this.Controls.Add(this.btnInar);
+            this.Controls.Add(this.backbtn);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
@@ -198,6 +189,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form5";
             this.Text = "Form5";
+            this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -216,10 +208,9 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button backbtn;
+        private System.Windows.Forms.Button btnInar;
+        private System.Windows.Forms.Button btnUpArch;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
     }
 }

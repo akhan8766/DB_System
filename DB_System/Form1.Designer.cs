@@ -96,7 +96,7 @@
             this.textBox3.Location = new System.Drawing.Point(99, 128);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(273, 16);
+            this.textBox3.Size = new System.Drawing.Size(273, 24);
             this.textBox3.TabIndex = 5;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 

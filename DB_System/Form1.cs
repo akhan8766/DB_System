@@ -31,7 +31,7 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into [ASETable] (ClassFile,Method,Codeblock,CodeAuthor) values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox6.Text +"')";
+            cmd.CommandText = "insert into [ASETable] (ClassFile,Method,CodeBlock,CodeAuthor) values ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox3.Text + "', '" + textBox6.Text +"')";
             cmd.ExecuteNonQuery();
             connection.Close();
             textBox1.Text = "";
@@ -84,7 +84,7 @@ namespace DB_System
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update ASETable set Method = '" + textBox2.Text + "' , ClassFile = '" + textBox1.Text + "', CodeBlock = '" + textBox3.Text + "', CodeAuthor = '" + textBox6.Text +"', where  BugId = '" + textBox5.Text +"'";
+            cmd.CommandText = "update ASETable set Method = '" + textBox2.Text + "' , ClassFile = '" + textBox1.Text + "', CodeBlock = '" + textBox3.Text + "', CodeAuthor = '" + textBox6.Text +"' where  BugId = '" + textBox5.Text +"'";
             cmd.ExecuteNonQuery();
             connection.Close();
             textBox1.Text = "";

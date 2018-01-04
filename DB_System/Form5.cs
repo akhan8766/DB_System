@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ColorCode;
+
 namespace DB_System
 {
     public partial class Form5 : Form
@@ -27,12 +29,14 @@ namespace DB_System
             DataTable dta = new DataTable();
             SqlDataAdapter dataadp = new SqlDataAdapter(cmd);
             dataadp.Fill(dta);
+            
             dataGridView1.DataSource = dta;
             connection.Close();
         }
 
         private void bugdisp_Click(object sender, EventArgs e)
         {
+            
             display_data();
         }
 
@@ -48,23 +52,53 @@ namespace DB_System
             form2.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string[,] Datavalue = new string[dataGridView1.Rows.Count, dataGridView1.Columns.Count];
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                foreach (DataGridViewColumn col in dataGridView1.Columns)
-                {
-                    Datavalue[row.Index, col.Index] = dataGridView1.Rows[row.Index].Cells[col.Index].Value.ToString();
-                }
-            }
-            int i = 0;
-            foreach (string ss in Datavalue)
-                listBox1.Items.Add(ss);
-            i++;
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into [ArchiveTable] (DeveloperName,Date,Comment) values ('" + textBox1.Text + "','" + textBox2.Text + "', '" + textBox3.Text + "')";
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            display_data();
+            MessageBox.Show("Data inserted successfully");
+        }
+
+        
+
+
+
+        private void btnUpArch_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "update ASETable set DeveloperName = '" + textBox1.Text + "', Date = '" + textBox2.Text + "', Comment = '" + textBox3.Text + "' where  BugId = '" + textBox4.Text + "' insert into [ArchiveTable] (Name,Cause,ClassFile,Method,CodeBlock,CodeAuthor,DeveloperName,Date,Comment)" + " select Name,Cause,ClassFile,Method,CodeBlock,CodeAuthor,DeveloperName,Date,Comment from [ASETable] where BugId = '"+textBox4.Text+"' delete from [ASETable] where BugId = '"+textBox4.Text+"'";
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            display_data();
+            MessageBox.Show("Data updated successfully");
+        }
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            form6.Show();
+            this.Hide();
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
         {
 
         }
