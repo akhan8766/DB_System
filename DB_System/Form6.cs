@@ -34,14 +34,14 @@ namespace DB_System
 
         private void btndisp_Click(object sender, EventArgs e)
         {
+
+
             display_data();
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
+
+
 
         }
 
-        
 
         private void buttonBck_Click(object sender, EventArgs e)
         {
@@ -49,6 +49,32 @@ namespace DB_System
             Form2 form2 = new Form2();
             form2.ShowDialog();
         }
+
+
+
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                textBox3.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                textBox4.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                textBox5.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                textBox6.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+                textBox7.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+                textBox8.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+                textBox9.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+                textBox10.Text = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("please click Display Archive Bug ");
+            }
+            
+
+        }
+    
 
         
     }

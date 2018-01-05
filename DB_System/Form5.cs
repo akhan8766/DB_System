@@ -102,6 +102,29 @@ namespace DB_System
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string colourizedSourceCode = new CodeColorizer().Colorize(txtSourceCodeView.Text, Languages.CSharp);
+            //txtSourceCode.Text = colourizedSourceCode;
+
+            string html = ("<!doctype html><head><meta charset=\"utf-8\" <title> Code Snippet </title> </head> <body>" + colourizedSourceCode + "</body></html>");
+            //System.IO.File.WriteAllText(@"F:\Advanced software engineering module\DB_System6\DB_System\Code.html", html);
+            webBrowser1.DocumentText = html;
+        }
+
+        public void ColourCodeCSharp()
+        {
+
+           
+
+
+        }
     }
     }
 

@@ -1,0 +1,8 @@
+<!doctype html><head><meta charset="utf-8" <title> Code Snippet </title> </head> <body><div style="color:Black;background-color:White;"><pre>
+<span style="color:Blue;">string</span> colourizedSourceCode = <span style="color:Blue;">new</span> CodeColorizer().Colorize(txtSourceCodeView.Text, Languages.CSharp);
+            <span style="color:Green;">//txtSourceCode.Text = colourizedSourceCode;</span>
+
+            <span style="color:Blue;">string</span> html = (<span style="color:#A31515;">&quot;&lt;!doctype html&gt;&lt;head&gt;&lt;meta charset=\&quot;utf-8\&quot; &lt;title&gt; Code Snippet &lt;/title&gt; &lt;/head&gt; &lt;body&gt;&quot;</span> + colourizedSourceCode + <span style="color:#A31515;">&quot;&lt;/body&gt;&lt;/html&gt;&quot;</span>);
+           System.IO.File.WriteAllText(<span style="color:#A31515;">@&quot;F:\Advanced software engineering module\DB_System6\DB_System\Code.html&quot;</span>, html);
+
+</pre></div></body></html>
