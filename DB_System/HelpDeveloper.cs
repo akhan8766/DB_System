@@ -16,7 +16,11 @@ namespace DB_System
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// back button returns you to the mainmenu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();

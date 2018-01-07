@@ -16,7 +16,11 @@ namespace DB_System
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// returns to main menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();

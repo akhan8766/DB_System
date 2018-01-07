@@ -82,7 +82,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(273, 20);
             this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -164,7 +163,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(513, 253);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-           
             // 
             // label4
             // 
@@ -218,10 +216,11 @@
             this.textBox6.Size = new System.Drawing.Size(273, 20);
             this.textBox6.TabIndex = 18;
             // 
-            // Form1
+            // WhiteBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(537, 628);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label6);
@@ -244,10 +243,9 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MinimumSize = new System.Drawing.Size(421, 503);
-            this.Name = "Form1";
+            this.Name = "WhiteBox";
             this.Text = "WhiteBox";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

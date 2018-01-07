@@ -1,45 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="DB_System.Form1">
+  <Class Name="DB_System.WhiteBox">
     <Position X="1.25" Y="0.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>ACAAAAAAASAAABiAAACBAABSIMg1gBAAEHROAAAAAAA=</HashCode>
-      <FileName>Form1.cs</FileName>
+      <HashCode>ACAAAAAAASAAABiAAACBAABCIMg1gBAAEHAKAAAAAAA=</HashCode>
+      <FileName>WhiteBox.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DB_System.Form2">
-    <Position X="5.25" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACCAAACAEAYAAAAAHAIAAAAAAA=</HashCode>
-      <FileName>Form2.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DB_System.Form3">
+  <Class Name="DB_System.LoginPage">
     <Position X="8.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAAAAQAACAAABAAAACAAAACAAAYAAAAEGAAAQAAAAA=</HashCode>
-      <FileName>Form3.cs</FileName>
+      <HashCode>ACAAAAQAACAAABAAAACAAAACAAA4AAAAEHAAAQBAAAA=</HashCode>
+      <FileName>LoginPage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DB_System.Form4">
+  <Class Name="DB_System.BlackBox">
     <Position X="11.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAACAgABAAAACBAABCAAAYAAAAEGAAAAAAAAA=</HashCode>
-      <FileName>Form4.cs</FileName>
+      <FileName>BlackBox.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DB_System.Form5">
-    <Position X="15.25" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ACAAAAUAACAAABGAAAKBAABCIAgJAEgAEGQAAAAAAAA=</HashCode>
-      <FileName>Form5.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="DB_System.Form6">
+  <Class Name="DB_System.Archive">
     <Position X="19.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QCAABAAEASAACBCAAAChAABCIAwBAAAAEAAIIAAAAIA=</HashCode>
-      <FileName>Form6.cs</FileName>
+      <HashCode>QCAABAAAASAACBCAEACBAABCIAwBAAAAEAAIIAAAAIA=</HashCode>
+      <FileName>Archive.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

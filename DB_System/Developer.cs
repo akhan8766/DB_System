@@ -12,6 +12,9 @@ using ColorCode;
 
 namespace DB_System
 {
+    /// <summary>
+    /// creates connection string linking to the appropriate database
+    /// </summary>
     public partial class Developer : Form
     {
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
@@ -19,6 +22,12 @@ namespace DB_System
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// display data method
+        /// you can call this method
+        /// selects using sql form the ASE table
+        /// 
+        /// </summary>
         public void display_data()
         {
             connection.Open();
@@ -33,7 +42,11 @@ namespace DB_System
             dataGridView1.DataSource = dta;
             connection.Close();
         }
-
+        /// <summary>
+        /// calls the display_data method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bugdisp_Click(object sender, EventArgs e)
         {
             
@@ -44,7 +57,11 @@ namespace DB_System
         {
 
         }
-
+        /// <summary>
+        /// hides the current form opens the main menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -52,7 +69,14 @@ namespace DB_System
             form2.ShowDialog();
         }
 
-        
+        /// <summary>
+        /// inserts into the archive table
+        /// using insert method
+        /// adds data into the rows of developername date and comment
+        /// once entered mesagebox informs data inserted successfully
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -71,7 +95,14 @@ namespace DB_System
         }
 
         
-
+        /// <summary>
+        /// update method
+        /// updates the columns in the ASETable which then translates all the information 
+        /// this is done using insert into method
+        /// calls the archive table and all the correct row values
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
 
         private void btnUpArch_Click(object sender, EventArgs e)
@@ -91,7 +122,11 @@ namespace DB_System
             MessageBox.Show("Data updated successfully");
         }
 
-
+        /// <summary>
+        /// directs to new form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click_1(object sender, EventArgs e)
         {
             Archive form6 = new Archive();
@@ -104,7 +139,13 @@ namespace DB_System
 
         }
 
-
+        /// <summary>
+        /// colorcode for syntax color in html
+        /// html cbody used a title head and body
+        /// calls the string and displays the code form the textbox to the webbrowser field
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click_1(object sender, EventArgs e)
         {
             string colourizedSourceCode = new CodeColorizer().Colorize(txtSourceCodeView.Text, Languages.CSharp);
@@ -122,6 +163,13 @@ namespace DB_System
 
 
         }
+        /// <summary>
+        /// updates the syntax code in the textbox to update the table
+        /// source code is now changed to the copied code
+        /// using update method once button clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void button3_Click(object sender, EventArgs e)
         {

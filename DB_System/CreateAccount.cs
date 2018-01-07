@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace DB_System
 {
+    /// <summary>
+    /// creates connection string to database
+    /// </summary>
     public partial class CreateAccount : Form
     {
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
@@ -17,6 +20,12 @@ namespace DB_System
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// display data method
+        /// selects from the ASETable
+        /// opens and closes connection
+        /// can call display_data() in another button without writing full contents of method
+        /// </summary>
         public void display_data()
         {
             connection.Open();
@@ -31,7 +40,12 @@ namespace DB_System
             //dataGridView1.DataSource = dta;
             connection.Close();
         }
-
+        /// <summary>
+        /// inserts username and password into the login table
+        /// using insert method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -45,8 +59,12 @@ namespace DB_System
             textBox2.Text = "";
             display_data();
             MessageBox.Show("user created successfully");
-
         }
+        /// <summary>
+        /// hides the user creation form takes you to login form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void button1_Click_1(object sender, EventArgs e)
         {

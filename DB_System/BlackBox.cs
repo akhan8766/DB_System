@@ -46,6 +46,12 @@ namespace DB_System
             textBox3.Text = "";
             MessageBox.Show("Data inserted successfully");
         }
+        /// <summary>
+        /// hides the current form
+        /// directs you back to previous form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void button1_Click(object sender, EventArgs e)
         {

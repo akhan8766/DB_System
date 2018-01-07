@@ -57,7 +57,12 @@ namespace DB_System
         {
             this.Close();
         }
-
+        /// <summary>
+        /// hides the login page
+        /// directs you to the create account page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();

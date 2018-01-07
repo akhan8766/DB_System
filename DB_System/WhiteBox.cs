@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace DB_System
 {
+    /// <summary>
+    /// connection string which links you to the database your tables are located in
+    /// </summary>
     public partial class WhiteBox : Form
     {
     
@@ -21,11 +24,14 @@ namespace DB_System
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        ///
+      
+        /// <summary>
+        /// insert method
+        /// inserts into the ASE Table and the correct rows 
+        /// rows are in conjunction to the textbox fields
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             connection.Open();
@@ -62,7 +68,12 @@ namespace DB_System
             connection.Close();
         }
 
-    
+    /// <summary>
+    /// deletes bug from the database
+    /// shows the datagrid view with bugs
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -81,6 +92,13 @@ namespace DB_System
             MessageBox.Show("Data deleted Successfully");
 
         }
+        /// <summary>
+        /// updates the specified columns in the ASE table 
+        /// does not allow to edit any of the data that has been entered by the black box
+        /// for example not allowed to enter a Name and cause
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -98,7 +116,12 @@ namespace DB_System
             display_data();
             MessageBox.Show("Data updated Successfully");
         }
-
+        /// <summary>
+        /// created command type
+        /// command text selects from table the sql name and the assigned textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
             connection.Open();
@@ -120,6 +143,11 @@ namespace DB_System
             textBox4.Text = "";
             textBox5.Text = "";            
         }
+        /// <summary>
+        /// exits the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -131,6 +159,11 @@ namespace DB_System
             
 
         }
+        /// <summary>
+        /// back button, takes back to the specified form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -139,12 +172,18 @@ namespace DB_System
             form2.ShowDialog();
 
         }
+        /// <summary>
+        /// 
+        /// displays the data onto the gridview
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void button5_Click_1(object sender, EventArgs e)
         {
             display_data();
         }
 
-      
+        
     }
 }
