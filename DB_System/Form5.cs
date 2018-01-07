@@ -125,6 +125,21 @@ namespace DB_System
 
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "update ArchiveTable set CodeBlock = '" +txtSourceCodeView.Text+"' where BugId = '" + textBox4.Text +"'";
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            txtSourceCodeView.Text = "";
+            display_data();
+            MessageBox.Show("Source Code updated successfully");
+        }
     }
     }
 
