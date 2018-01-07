@@ -1,6 +1,6 @@
 ﻿namespace DB_System
 {
-    partial class Form5
+    partial class Developer
     {
         /// <summary>
         /// Required designer variable.
@@ -57,7 +57,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(457, 493);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // bugdisp
             // 

@@ -12,10 +12,10 @@ using ColorCode;
 
 namespace DB_System
 {
-    public partial class Form5 : Form
+    public partial class Developer : Form
     {
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
-        public Form5()
+        public Developer()
         {
             InitializeComponent();
         }
@@ -48,7 +48,7 @@ namespace DB_System
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 form2 = new Form2();
+            MainMenu form2 = new MainMenu();
             form2.ShowDialog();
         }
 
@@ -56,6 +56,7 @@ namespace DB_System
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             connection.Open();
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -93,7 +94,7 @@ namespace DB_System
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
+            Archive form6 = new Archive();
             form6.Show();
             this.Hide();
         }
@@ -103,10 +104,6 @@ namespace DB_System
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void button2_Click_1(object sender, EventArgs e)
         {

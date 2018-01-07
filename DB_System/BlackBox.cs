@@ -10,10 +10,10 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace DB_System
 {
-    public partial class Form4 : Form
+    public partial class BlackBox : Form
     {
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
-        public Form4()
+        public BlackBox()
         {
             InitializeComponent();
         }
@@ -29,7 +29,11 @@ namespace DB_System
         {
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             connection.Open();
@@ -46,7 +50,7 @@ namespace DB_System
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 form2 = new Form2();
+            MainMenu form2 = new MainMenu();
             form2.ShowDialog();
         }
     }

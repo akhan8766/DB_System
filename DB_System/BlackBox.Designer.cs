@@ -1,6 +1,6 @@
 ﻿namespace DB_System
 {
-    partial class Form4
+    partial class BlackBox
     {
         /// <summary>
         /// Required designer variable.

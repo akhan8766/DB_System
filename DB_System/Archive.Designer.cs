@@ -1,6 +1,6 @@
 ﻿namespace DB_System
 {
-    partial class Form6
+    partial class Archive
     {
         /// <summary>
         /// Required designer variable.

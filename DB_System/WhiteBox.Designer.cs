@@ -1,6 +1,6 @@
 ﻿namespace DB_System
 {
-    partial class Form1
+    partial class WhiteBox
     {
         /// <summary>
         /// Required designer variable.
@@ -98,7 +98,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(273, 24);
             this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -165,7 +164,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(513, 253);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
+           
             // 
             // label4
             // 
@@ -248,7 +247,7 @@
             this.Name = "Form1";
             this.Text = "WhiteBox";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,13 +11,19 @@ using System.Data.SqlClient;
 using ColorCode;
 namespace DB_System
 {
-    public partial class Form6 : Form
+    public partial class Archive : Form
     {
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
-        public Form6()
+        public Archive()
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// display data method, when used display_data(); will use this method 
+        /// can call this method instead of writing all this code for every buton to display data
+        /// selects the data in the table named ArchiveTable
+        /// 
+        /// </summary>
         public void display_data()
         {
             connection.Open();
@@ -46,11 +52,19 @@ namespace DB_System
         private void buttonBck_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 form2 = new Form2();
+            MainMenu form2 = new MainMenu();
             form2.ShowDialog();
         }
 
-
+        /// <summary>
+        /// click on datagridview
+        /// click on display archive bug to view the bigs in the datagrid
+        /// if you click the datagrid without displaying, will recieve error message
+        /// once clicked on display archive bug you can view bugs
+        /// click on row and informaion will display in specified textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -74,7 +88,6 @@ namespace DB_System
             
 
         }
-    
 
         
     }

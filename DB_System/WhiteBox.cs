@@ -10,13 +10,13 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace DB_System
 {
-    public partial class Form1 : Form
+    public partial class WhiteBox : Form
     {
     
         SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
         private readonly string connectionString;
 
-        public Form1()
+        public WhiteBox()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace DB_System
         {
 
         }
-
+        ///
         private void button1_Click(object sender, EventArgs e)
         {
             connection.Open();
@@ -44,6 +44,8 @@ namespace DB_System
 
         // display data
         /// <summary>
+        /// This is the display method 
+        /// created a sql command and used the select sql command to select from specified table
         /// 
         /// </summary>
         public void display_data()
@@ -60,10 +62,7 @@ namespace DB_System
             connection.Close();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-        
-        }
+    
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -136,7 +135,7 @@ namespace DB_System
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 form2 = new Form2();
+            MainMenu form2 = new MainMenu();
             form2.ShowDialog();
 
         }
@@ -146,19 +145,6 @@ namespace DB_System
             display_data();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
+      
     }
 }

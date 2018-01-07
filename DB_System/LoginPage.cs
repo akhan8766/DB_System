@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace DB_System
 {
-    public partial class Form3 : Form
+    public partial class LoginPage : Form
     {
-        public Form3()
+        public LoginPage()
         {
             InitializeComponent();
         }
@@ -21,7 +21,16 @@ namespace DB_System
         {
 
         }
-
+       
+    
+        /// <summary>
+        /// connects to database using data string passed
+        /// accesses the login table   
+        /// once entered correct login credentials next form will open which is the main menu
+        /// if clicked the login without entering anything in text box or the incorrect credentials error message will show
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\myDB.mdf;Integrated Security=True;Connect Timeout=30");
@@ -31,7 +40,7 @@ namespace DB_System
             if (dta.Rows[0][0].ToString() == "1")
             {
                 this.Hide();
-                Form2 form2 = new Form2();
+                MainMenu form2 = new MainMenu();
                 form2.Show();
             }
             else
@@ -39,9 +48,21 @@ namespace DB_System
                 MessageBox.Show("please enter correct username and password", "alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>
+        /// close the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreateAccount createaccount = new CreateAccount();
+            createaccount.Show();
         }
     }
 }

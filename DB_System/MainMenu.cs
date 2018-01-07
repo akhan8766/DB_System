@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace DB_System
 {
-    public partial class Form2 : Form
+    public partial class MainMenu : Form
     {
-        public Form2()
+        public MainMenu()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 Form1 = new Form1();
+            WhiteBox Form1 = new WhiteBox();
             Form1.Show();
             this.Hide();
         }
@@ -31,7 +31,7 @@ namespace DB_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form4 Form4 = new Form4();
+            BlackBox Form4 = new BlackBox();
             Form4.Show();
             this.Hide();
 
@@ -39,7 +39,7 @@ namespace DB_System
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
+            Developer form5 = new Developer();
             form5.Show();
             this.Hide();
         }
