@@ -41,7 +41,11 @@ namespace DB_System
             display_data();
             MessageBox.Show("Data inserted Successfully");
         }
+
         // display data
+        /// <summary>
+        /// 
+        /// </summary>
         public void display_data()
         {
             connection.Open();

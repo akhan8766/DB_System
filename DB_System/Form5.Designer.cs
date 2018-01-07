@@ -165,7 +165,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(636, 237);
+            this.button1.Location = new System.Drawing.Point(638, 211);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
@@ -175,23 +175,23 @@
             // 
             // txtSourceCodeView
             // 
-            this.txtSourceCodeView.Location = new System.Drawing.Point(515, 314);
+            this.txtSourceCodeView.Location = new System.Drawing.Point(849, 69);
             this.txtSourceCodeView.Multiline = true;
             this.txtSourceCodeView.Name = "txtSourceCodeView";
-            this.txtSourceCodeView.Size = new System.Drawing.Size(427, 174);
+            this.txtSourceCodeView.Size = new System.Drawing.Size(427, 228);
             this.txtSourceCodeView.TabIndex = 15;
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(517, 536);
+            this.webBrowser1.Location = new System.Drawing.Point(849, 345);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(424, 134);
+            this.webBrowser1.Size = new System.Drawing.Size(424, 303);
             this.webBrowser1.TabIndex = 16;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(517, 494);
+            this.button2.Location = new System.Drawing.Point(849, 303);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 17;
@@ -203,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 710);
+            this.ClientSize = new System.Drawing.Size(1288, 710);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.txtSourceCodeView);

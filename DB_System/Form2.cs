@@ -48,5 +48,31 @@ namespace DB_System
         {
 
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void blackBoxTestingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpBlackBox form7 = new HelpBlackBox();
+            form7.Show();
+            this.Hide();
+        }
+
+        private void whiteBoxTestingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpWhiteBox HelpWhiteBox = new HelpWhiteBox();
+            HelpWhiteBox.Show();
+            this.Hide();
+        }
+
+        private void developerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpDeveloper HelpDeveloper = new HelpDeveloper();
+            HelpDeveloper.Show();
+            this.Hide();
+        }
     }
 }
